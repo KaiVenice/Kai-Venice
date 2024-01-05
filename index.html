@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="small_logo.png" alt="Kai Venice Logo" class="logo">
+            <h2>Kai Venice</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#mystory">My Story</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div id="overlay"></div>
+        <div id="whatsNew">
+            <h2>WHAT'S NEW?</h2>
+            <p>
+                <li>LAST TIME still in progress</li>
+                <li>New Design of Album Cover</li>
+                <li>First track "Relationships" is being produced recently</li>
+                <li>Looking for Features on the Album...</li>
+                <li>Website being Updated</li>
+            </p>
+            <p>THERE IS NO NEW CONTEXT TO SEE  ✓</p>
+            <p>______________________________________</p>
+<!-- Lettore audio personalizzato -->
+            <div class="audio-player">
+                <img src="kailasttime.png" alt="Cover Image" class="cover-image">
+                <div class="audio-details">
+                    <h3>Cut my Hair (Cover)</h3>
+                    <p class="small-text">Tate Mcrae, Kai Venice</p>
+                </div>
+                <audio controls>
+                    <source src="KaiCoverTate.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <section id="mystory">
+            <div class="My Story">
+                <img src="unknow.png" alt="Unknow Image" class="profile-image">
+                <div class="text-container">
+                    <h2>KAI VENICE</h2>
+                    <p>
+                        Kai Venice is an Italian young singer. His inspirations come from more artists in the industry of music.
+                        His name contains the city Venice, which he really loves and goes often due to family, and the name Kai was
+                        taken by himself because he liked the name personally. Today Kai works with Bandlab to produce vocals into
+                        instrumentals and created his own community to collaborate and feature with more producers.
+                    </p>
+                    <h2>HOW DID IT START?</h2>
+                    <p>
+                        Kai always had a passion for music, even when he was a kid. He liked Pop and Alternative songs, but
+                        didn't really know it. At the age of 10, he started to follow a really great artist in the industry of
+                        music. That artist opened a world for him, and he started to follow more artists and listen to more
+                        genres. At the age of 13, he made a decision; he wanted to start making his own music, where he only
+                        covered songs from different artists. Unfortunately, all the copies are unreleased and went missing,
+                        except one: Cut my Hair (Cover).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    <section id="portfolio">
+            <div class="section-content">
+                <h2>PORTFOLIO</h2>
+                <p>This site is a Gallery made by Kai. He wanted to add a Portfolio and he made some Photoshoots to put them into the Website.</p>
+                
+                <div class="gallery">
+                    <img src="coming.png" alt="Coming">
+                    <img src="soon.png" alt="Soon">
+                    <img src="by.png" alt="By">
+                    <img src="kai.png" alt="Kai">
+                    <img src="venice.png" alt="Venice">
+                <div class="kais-words">
+                    <h3>KAI'S WORDS</h3>
+                    <p>"I always liked Photoshoots so I thought it would be cool to try it one time and I think it was worth it. I really liked the vibe and I am very happy to share the photos with you all now!"</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="contact" style="display: none;">
+            <div class="content-box">
+                <h2>Contact and Support</h2>
+                <p>If you have any questions or need support, feel free to reach out to us. We appreciate your feedback and are here to assist you.</p>
+                <p>For more information and links, you can visit my <a href="https://linktr.ee/kaivenice" target="_blank" rel="noopener noreferrer">Social Platforms</a>.</p>
+            </div>
+        </section>
+        
+        
+           
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetSectionId = this.getAttribute('href').substring(1);
+
+                    sections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+
+                    const targetSection = document.getElementById(targetSectionId);
+                    targetSection.style.display = 'block';
+
+                    window.location.hash = targetSectionId;
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+<!-- ... (Altri elementi HTML) ... -->
+
+<section id="My Story" style="display: none;">
+    <div class="My Story">
+        <img src="unknow.png" alt="Unknow Image" class="profile-image">
+        <div class="text-container">
+            <h2>KAI VENICE</h2>
+            <p>
+                Kai Venice is an Italian young singer. His inspirations come from more artists in the industry of music.
+                His name contains the city Venice, which he really loves and goes often due to family, and the name Kai was
+                taken by himself because he liked the name personally. Today Kai works with Bandlab to produce vocals into
+                instrumentals and created his own community to collaborate and feature with more producers.
+            </p>
+            <h2>HOW DID IT START?</h2>
+            <p>
+                Kai always had a passion for music, even when he was a kid. He liked Pop and Alternative songs, but
+                didn't really know it. At the age of 10, he started to follow a really great artist in the industry of
+                music. That artist opened a world for him, and he started to follow more artists and listen to more
+                genres. At the age of 13, he made a decision; he wanted to start making his own music, where he only
+                covered songs from different artists. Unfortunately, all the copies are unreleased and went missing,
+                except one: Cut my Hair (Cover).
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="home" class="active">
+    <!-- Contenuto della sezione Home -->
+    <!-- ... -->
+</section>
+
+<section id="MyStory" class="inactive">
+    <!-- Contenuto della sezione My Story -->
+    <!-- ... -->
+</section>
+
+<section id="portfolio" class="inactive">
+    <!-- Contenuto della sezione Portfolio -->
+    <!-- ... -->
+</section>
+
+<section id="contact" class="inactive">
+    <!-- Contenuto della sezione Contact -->
+    <!-- ... -->
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kai Venice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- ... -->
+    </header>
+
+    <section id="home" class="active">
+        <!-- Contenuto della sezione Home -->
+        <div>
+            <h1>Willkommen auf der offiziellen Website von Kai Venice</h1>
+            <p>Entdecke die Musik und die Geschichten hinter Kai Venice.</p>
+        </div>
+    </section>
+
+    <section id="MyStory" class="inactive">
+        <!-- Contenuto della sezione My Story -->
+        <div class="content-box">
+            <h1>My Story</h1>
+            <p>Kai Venice is an Italian young singer. His inspirations come from more artists in the music industry.</p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="inactive">
+        <!-- Contenuto della sezione Portfolio -->
+        <div class="content-box">
+            <h1>Portfolio</h1>
+            <p>Explore Kai Venice's artistic portfolio, featuring a collection of his creative works and collaborations.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="inactive">
+        <!-- Contenuto della sezione Contact -->
+        <div class="content-box">
+            <h2>Kontakt</h2>
+            <p>Kontaktiere Kai Venice für Anfragen, Zusammenarbeit oder Fanpost. Er freut sich über Nachrichten von seinen Fans und ist gespannt darauf, von dir zu hören.</p>
+        </div>
+    </section>
+
+    <!-- ... -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kai Venice</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/archivo-black');
+</style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Viva+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenuto della tua pagina -->
+</body>
+</html>
+
+
